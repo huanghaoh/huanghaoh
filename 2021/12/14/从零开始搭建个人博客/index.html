@@ -16,16 +16,16 @@
   <meta name="description" content="blog">
   <meta name="author" content="Huanghao">
   <meta name="keywords" content="">
-  <meta name="description" content="准备工作安装Node.jsNode.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，用来运行我们的项目。 建议下载长期支持版而非当前发布版 安装 Node.js  Git与GitHub安装GitGit 是一个开源的分布式版本控制系统，用来管理我们的博客。 安装 Git  注册GitHubGitHub 是全世界最大的开源项目与代码托管平台，也是众多开发者的交流场所。还是">
+  <meta name="description" content="写在前面             为了及时总结学过的知识，以及踩过的坑和修过的BUG，我决定写博客来记录这些。最初我是在CSDN上写博客，但是CSDN上广告太多，而且不支持个性化定制。后来又了解到博客园、简书等平台，但是他们都有自己的不足，然后就萌生了搭建个人博客的想法。常用的博客框架有WordPress，Typecho，Ghost等，但是这些往往都需要购置自己的服务器，无法静态化的部署到GitH">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从零开始搭建个人博客">
 <meta property="og:url" content="http://example.com/2021/12/14/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="Huanghao&#39;s blog">
-<meta property="og:description" content="准备工作安装Node.jsNode.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，用来运行我们的项目。 建议下载长期支持版而非当前发布版 安装 Node.js  Git与GitHub安装GitGit 是一个开源的分布式版本控制系统，用来管理我们的博客。 安装 Git  注册GitHubGitHub 是全世界最大的开源项目与代码托管平台，也是众多开发者的交流场所。还是">
+<meta property="og:description" content="写在前面             为了及时总结学过的知识，以及踩过的坑和修过的BUG，我决定写博客来记录这些。最初我是在CSDN上写博客，但是CSDN上广告太多，而且不支持个性化定制。后来又了解到博客园、简书等平台，但是他们都有自己的不足，然后就萌生了搭建个人博客的想法。常用的博客框架有WordPress，Typecho，Ghost等，但是这些往往都需要购置自己的服务器，无法静态化的部署到GitH">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/huanghaoh/imgbed/raw/master/img/202112141217543.png">
 <meta property="article:published_time" content="2021-12-14T02:35:38.269Z">
-<meta property="article:modified_time" content="2021-12-14T05:14:21.738Z">
+<meta property="article:modified_time" content="2021-12-14T06:16:36.209Z">
 <meta property="article:author" content="Huanghao">
 <meta property="article:tag" content="博客">
 <meta property="article:tag" content="Hexo">
@@ -45,7 +45,7 @@
     
     
       
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-dark.min.css" />
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/tomorrow-night-blue.min.css" />
     
   
 
@@ -212,7 +212,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.3k 字
+      1.7k 字
     </span>
   
 
@@ -221,7 +221,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4 分钟
+      5 分钟
     </span>
   
 
@@ -253,8 +253,12 @@
             <h1 style="display: none">从零开始搭建个人博客</h1>
             
             <div class="markdown-body">
-              <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，用来运行我们的项目。</p>
-<p>建议下载<strong>长期支持版</strong>而非<strong>当前发布版</strong></p>
+              <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><div class="note note-info">
+            <p>为了及时总结学过的知识，以及踩过的坑和修过的BUG，我决定写博客来记录这些。最初我是在CSDN上写博客，但是CSDN上广告太多，而且不支持个性化定制。后来又了解到博客园、简书等平台，但是他们都有自己的不足，然后就萌生了搭建个人博客的想法。</p><p>常用的博客框架有WordPress，Typecho，Ghost等，但是这些往往都需要购置自己的服务器，无法静态化的部署到GitHub Pages上，他们的好处是功能性和灵活性大大提升。</p><p>静态化的博客框架有Vuepress，Gatsby等，但这些是为了写文档而量身定制的，相应的博客插件和主题会少很多。</p><p>所以对于新手来说，使用Hexo和Hugo作为起始点，不失为一个好选择。（Hogo是基于Go语言，如果想对博客进行自定义，还需要学习JavaScript，所以选择基于JavaScript的Hexo可以降低学习成本。）</p>
+          </div>
+
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，用来运行我们的项目。</p>
+<p>建议下载<strong>长期维护版</strong>而非<strong>最新尝鲜版</strong></p>
 <a class="btn" href="https://nodejs.org/zh-cn/"  title="点击前往" target="_blank">安装 Node.js</a>
 
 <h3 id="Git与GitHub"><a href="#Git与GitHub" class="headerlink" title="Git与GitHub"></a>Git与GitHub</h3><h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p>Git 是一个开源的分布式版本控制系统，用来管理我们的博客。</p>
